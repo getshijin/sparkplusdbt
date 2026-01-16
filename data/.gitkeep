@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+
+# Conda
+.envs/
+conda-meta/
+
+# dbt
+dbt_packages/
+target/
+logs/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Credentials
+profiles.yml
+*.key
+*.pem
