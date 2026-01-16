@@ -1,0 +1,9 @@
+synapse_project:
+  target: dev
+  outputs:
+    dev:
+      type: synapse
+      authentication: cli
+      server: synapsewsshijin.sql.azuresynapse.net
+      database: lake_db
+      schema: dbo
