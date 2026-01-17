@@ -1,7 +1,7 @@
 with source_store_trans as (
 
     select *
-    from {{ source('lake_db', 'ext_transactions') }}
+    from {{ source('lake_db', 'customers') }}
 
 ),
 
