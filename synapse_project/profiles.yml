@@ -10,3 +10,12 @@ synapse_project:
       schema: dbo
       encrypt: true
       trust_cert: false
+    int:
+      type: synapse
+      authentication: cli
+      driver: ODBC Driver 18 for SQL Server
+      server: synapsewsshijin.sql.azuresynapse.net
+      database: dedicated_synapsepool
+      schema: dbo
+      encrypt: true
+      trust_cert: false

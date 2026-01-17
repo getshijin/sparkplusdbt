@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: lake_db
+    description: "This is the source schema for the lake database."
+    database: lake_db
+    schema: dbo
+    tables:
+      - name: ext_transactions
+        description: "This table contains external transactions data."
+
+
