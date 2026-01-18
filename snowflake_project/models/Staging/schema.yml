@@ -1,0 +1,89 @@
+version : 1
+
+sources:
+  - name: raw_lake
+    description: "This is the source schema for the lake database."
+    database: MOVIELENS
+    schema: RAW
+    tables:
+    # List of tables in the source schema
+    #Movie table
+
+      - name: raw_movies
+        description: "This table contains external customers data."
+        columns:
+          - name: movieid
+            description: "The unique identifier for each movie."
+            tests:
+              - not_null
+              - unique
+          - name: title
+            description: "The title of the movie."
+          - name: genres
+            description: "The genre of the movie."
+      #Ratings table
+      - name: raw_ratings #userId,movieId,rating,timestamp
+        description: "This table contains external orders data."
+        columns:
+          - name: userid
+            description: "The unique identifier for each user."
+            tests:
+              - not_null
+          - name: movieid
+            description: "The unique identifier for each movie."
+            tests:
+              - not_null
+          - name: rating
+            description: "The rating given by the user to the movie."
+          - name: timestamp
+            description: "The timestamp of when the rating was given."
+      #Tags table
+      - name: raw_tags #userId,movieId,tag,timestamp
+        description: "This table contains external products data."
+        columns:
+          - name: userid
+            description: "The unique identifier for each user."
+            tests:
+              - not_null
+          - name: movieid
+            description: "The unique identifier for each movie."
+            tests:
+              - not_null
+          - name: tag
+            description: "The tag given by the user to the movie."
+          - name: timestamp
+            description: "The timestamp of when the tag was given."
+      #Links table
+      - name: raw_links #movieId,imdbId,tmdbId
+        description: "This table contains external suppliers data." 
+        columns:
+          - name: movieid
+            description: "The unique identifier for each movie."
+            tests:
+              - not_null
+          - name: imdbid
+            description: "The IMDB identifier for the movie."
+          - name: tmdbid
+            description: "The TMDB identifier for the movie."
+      #Genome Scores table
+      - name: raw_genome_scores #movieId,tagId,relevance
+        description: "This table contains external genome scores data."
+        columns:
+          - name: movieid
+            description: "The unique identifier for each movie."
+            tests:
+              - not_null
+          - name: tagId
+            description: "The tag identifier for the movie."
+          - name: relevance
+            description: "The relevance of the tag for the movie."
+      #Genome Tags table
+      - name: raw_genome_tags #tagId,tag
+        description: "This table contains external genome tags data."
+        columns:
+          - name: tagId
+            description: "The unique identifier for each tag."
+            tests:
+              - not_null
+          - name: tag
+            description: "The tag description."
