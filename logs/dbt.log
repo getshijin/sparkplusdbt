@@ -256,3 +256,117 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m00:28:40.215697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B16D98C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B16A289D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B10286D10>]}
 [0m00:28:40.215697 [debug] [MainThread]: Flushing usage events
 [0m00:28:40.769503 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:48:18.182322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D212341350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D213349450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D21334AE10>]}
+
+
+============================== 15:48:18.182322 | a7cd6b97-53c5-4534-92ac-0d5a0f2e3f96 ==============================
+[0m15:48:18.182322 [info ] [MainThread]: Running with dbt=1.11.2
+[0m15:48:18.182322 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\getsh\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m15:48:18.242238 [info ] [MainThread]: dbt version: 1.11.2
+[0m15:48:18.244185 [info ] [MainThread]: python version: 3.11.0
+[0m15:48:18.245184 [info ] [MainThread]: python path: C:\Users\getsh\AppData\Local\Programs\Python\Python311\python.exe
+[0m15:48:18.245184 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m15:48:18.923533 [info ] [MainThread]: Using profiles dir at C:\Users\getsh\.dbt
+[0m15:48:18.924492 [info ] [MainThread]: Using profiles.yml file at C:\Users\getsh\.dbt\profiles.yml
+[0m15:48:18.925493 [info ] [MainThread]: Using dbt_project.yml file at E:\DBT\dbt_project.yml
+[0m15:48:18.927961 [info ] [MainThread]: adapter type: synapse
+[0m15:48:18.928355 [info ] [MainThread]: adapter version: 1.8.4
+[0m15:48:18.929362 [info ] [MainThread]: Configuration:
+[0m15:48:18.929362 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:48:18.930364 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:48:18.931363 [info ] [MainThread]: Required dependencies:
+[0m15:48:18.932363 [debug] [MainThread]: Executing "git --help"
+[0m15:48:18.974337 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:48:18.974337 [debug] [MainThread]: STDERR: "b''"
+[0m15:48:18.974337 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:48:18.974337 [info ] [MainThread]: Connection:
+[0m15:48:18.974337 [info ] [MainThread]:   server: synapsewsshijin.sql.azuresynapse.net
+[0m15:48:18.980375 [info ] [MainThread]:   database: lake_db
+[0m15:48:18.981303 [info ] [MainThread]:   schema: dbo
+[0m15:48:18.982555 [info ] [MainThread]:   UID: None
+[0m15:48:18.984862 [info ] [MainThread]:   client_id: None
+[0m15:48:18.985444 [info ] [MainThread]:   authentication: cli
+[0m15:48:18.986583 [info ] [MainThread]:   encrypt: True
+[0m15:48:18.987347 [info ] [MainThread]:   trust_cert: False
+[0m15:48:18.987917 [info ] [MainThread]:   retries: 3
+[0m15:48:18.988526 [info ] [MainThread]:   login_timeout: 0
+[0m15:48:18.989168 [info ] [MainThread]:   query_timeout: 0
+[0m15:48:18.990411 [info ] [MainThread]:   trace_flag: False
+[0m15:48:18.991195 [info ] [MainThread]: Registered adapter: synapse=1.8.4
+[0m15:48:19.481220 [debug] [MainThread]: Acquiring new synapse connection 'debug'
+[0m15:48:19.481220 [debug] [MainThread]: Using synapse connection "debug"
+[0m15:48:19.481220 [debug] [MainThread]: On debug: select 1 as id
+[0m15:48:19.481220 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:48:19.481220 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=synapsewsshijin.sql.azuresynapse.net;Database=lake_db;encrypt=Yes;TrustServerCertificate=No;APP=dbt-synapse/1.9.5;ConnectRetryCount=3
+[0m15:48:24.202806 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a synapse connection.
+3 attempts remaining. Retrying in 1 seconds.
+Error:
+('28000', "[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<token-identified principal>'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<token-identified principal>'. (18456)")
+[0m15:48:25.205205 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=synapsewsshijin.sql.azuresynapse.net;Database=lake_db;encrypt=Yes;TrustServerCertificate=No;APP=dbt-synapse/1.9.5;ConnectRetryCount=3
+[0m15:48:26.022638 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a synapse connection.
+2 attempts remaining. Retrying in 1 seconds.
+Error:
+('28000', "[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<token-identified principal>'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<token-identified principal>'. (18456)")
+[0m15:48:27.025314 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=synapsewsshijin.sql.azuresynapse.net;Database=lake_db;encrypt=Yes;TrustServerCertificate=No;APP=dbt-synapse/1.9.5;ConnectRetryCount=3
+[0m15:48:27.880235 [debug] [MainThread]: fabric adapter: Got a retryable error when attempting to open a synapse connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+('28000', "[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<token-identified principal>'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<token-identified principal>'. (18456)")
+[0m15:48:28.882032 [debug] [MainThread]: fabric adapter: Using connection string: DRIVER={ODBC Driver 18 for SQL Server};SERVER=synapsewsshijin.sql.azuresynapse.net;Database=lake_db;encrypt=Yes;TrustServerCertificate=No;APP=dbt-synapse/1.9.5;ConnectRetryCount=3
+[0m15:48:29.674232 [debug] [MainThread]: fabric adapter: Error running SQL: select 1 as id
+[0m15:48:29.674232 [debug] [MainThread]: fabric adapter: Rolling back transaction.
+[0m15:48:29.674232 [debug] [MainThread]: On debug: No close available on handle
+[0m15:48:29.674232 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m15:48:29.687006 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m15:48:29.687006 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <E:\DBT\dbt_project.yml> not found
+
+[0m15:48:29.687006 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  ('28000', "[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<token-identified principal>'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user '<token-identified principal>'. (18456)")
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m15:48:29.695948 [debug] [MainThread]: Command `dbt debug` failed at 15:48:29.687006 after 11.63 seconds
+[0m15:48:29.695948 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:48:29.697836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D213364C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D213366A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D213A75250>]}
+[0m15:48:29.699940 [debug] [MainThread]: Flushing usage events
+[0m15:48:30.437491 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:57:51.641396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285CC794B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285CCAF9B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285C942B910>]}
+
+
+============================== 13:57:51.662380 | 6e7f4dd9-4c4d-4034-90b3-43405ef4980d ==============================
+[0m13:57:51.662380 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:57:51.663968 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\getsh\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init snowflake_project', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m13:57:51.846433 [debug] [MainThread]: Starter project path: C:\Users\getsh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\include\starter_project
+[0m13:57:51.871515 [info ] [MainThread]: 
+Your new dbt project "snowflake_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:57:51.872524 [info ] [MainThread]: Setting up your profile.
+[0m13:59:23.301794 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m13:59:23.302853 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m13:59:23.303788 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m14:01:42.429356 [info ] [MainThread]: Profile snowflake_project written to C:\Users\getsh\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:01:42.433952 [debug] [MainThread]: Command `dbt init` succeeded at 14:01:42.433952 after 231.02 seconds
+[0m14:01:42.435059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285CCB09CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285C602D390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285C602D3D0>]}
+[0m14:01:42.437246 [debug] [MainThread]: Flushing usage events
+[0m14:01:43.049321 [debug] [MainThread]: An error was encountered while trying to flush usage events
