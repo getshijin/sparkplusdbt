@@ -36,3 +36,5 @@ models:
       +materialized: table
     Fct:
       +materialized: table
+    mart:
+      +materialized: table
