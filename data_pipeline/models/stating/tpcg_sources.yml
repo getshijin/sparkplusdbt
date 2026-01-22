@@ -12,7 +12,7 @@ sources:
                - not_null
                - unique
 
-      - name: lineitems
+      - name: lineitem
         columns:
            - name: l_orderkey
              tests:
