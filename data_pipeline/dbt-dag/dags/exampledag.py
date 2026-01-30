@@ -1,15 +1,29 @@
-from airflow import DAG
-from airflow.operators.bash import BashOperator
 from datetime import datetime
+from cosmos import DbtDag, ProjectConfig, ProfileConfig, ExecutionConfig
+from cosmos.profiles import SnowflakeUserPasswordProfileMapping
 
-with DAG(
-    dag_id="dbt_pipeline",
-    start_date=datetime(2025, 1, 1),
-    schedule="@daily",
-    catchup=False
-) as dag:
+profile_config = ProfileConfig(
+    profile_name="my_snowflake_profile",
+    target_name="dev",
+    profile_mapping=SnowflakeUserPasswordProfileMapping(
+        conn_id="my_snowflake_connection",
+        profile_args={
+            "database": "dbt_db",
+            "schema": "dbt_schema",
+        },
+    ),
+)
 
-    dbt_run = BashOperator(
-        task_id="dbt_run",
-        bash_command="cd /usr/local/airflow/include/dbt/data_pipeline && dbt run"
-    )
+dbt_snowflake_dag = DbtDag(
+    project_config=ProjectConfig(
+        "/usr/local/airflow/dags/dbt-projects/my_dbt_project"
+    ),
+    profile_config=profile_config,
+    execution_config=ExecutionConfig(
+        dbt_executable_path="/home/astro/.local/bin/dbt",
+    ),
+    schedule_interval="@daily",
+    start_date=datetime(2023, 9, 10),
+    catchup=False,
+    dag_id="dbt_dag",
+)
