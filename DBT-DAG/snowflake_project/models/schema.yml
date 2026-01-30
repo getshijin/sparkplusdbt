@@ -1,0 +1,27 @@
+models:
+  - name: dim_movie
+    description: "This table contains movie dimension data."
+    columns:
+      - name: movieid
+        description: "The unique identifier for each movie."
+        tests:
+          - not_null
+          - unique
+      - name: title
+        description: "The title of the movie."
+      - name: genres
+        description: "The genres associated with the movie."
+        
+  - name: dim_user
+    description: "This table contains user dimension data."
+    columns:
+      - name: userid
+        description: "The unique identifier for each user."
+        tests:
+          - not_null
+          - unique
+      - name: age
+        description: "The age of the user."
+      - name: gender
+        description: "The gender of the user."
+
